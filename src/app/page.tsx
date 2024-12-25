@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 
 export default async function Home() {
@@ -10,6 +10,7 @@ export default async function Home() {
         <h3 className='mt-5 text-center text-xl'>Click on the postId for more Details!</h3>
       <br/>
       <br/>
+       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
          {res.map((post:any , index:number)=>(
           <div key={index}>
             <Link href={`${post.id}`}>
